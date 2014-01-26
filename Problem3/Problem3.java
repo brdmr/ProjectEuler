@@ -7,9 +7,10 @@ public class Problem3 {
             double maxPrime = 0;
             
             for(int i = 2; i < number; i++){
-                iterations = iterations + 1;
                 if(number % i == 0){
                     number = number / i;
+                    // check if there exist duplicates of current number
+                    i = i-1;
                 }
             }
             if(number > maxPrime){
